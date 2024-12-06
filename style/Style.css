@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  nav {
+    background-color: #333;
+    color: white;
+    height: 50px;
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    width: 25vh; /* Ajuste o valor conforme necessário */
+    text-align: center;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+    /* font-weight: bold; */
+    transform: 0,5s;
+
+    border-color: white;
+  }
+  section {
+    display: none; /* Inicialmente oculta todas as seções */
+    padding: 20px;
+  }
+  section.active {
+    display: block; /* Mostra apenas a seção ativa */
+  }
