@@ -1,38 +1,86 @@
+:root {
+  /*  Main color for Nav and some others  */
+  --nav-color-dark-theme: #222831;
+
+  /*  Color for Body contents  */
+  --content-color-dark-theme: #31363f;
+
+  /*  Color for Nav and Footer text  */
+  --nav-text-color-dark-theme: #76abae;
+
+  /*  Color for text content  */
+  --body-h123456-text-Color: #76abae;
+  --body-text-color-dark-theme: white;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  nav {
-    background-color: #333;
-    color: white;
-    height: 50px;
-    display: flex;
-    /* justify-content: space-around; */
-    justify-content: center;
-    align-items: center;
-  }
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--body-text-color-dark-theme);
 
-  nav a {
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-    display: inline-block;
-    width: 25vh; /* Ajuste o valor conforme necessário */
-    text-align: center;
-  }
+  height: 100vh;
+  width: 100%;
+}
 
-  nav a:hover {
-    text-decoration: underline;
-    /* font-weight: bold; */
-    transform: 0,5s;
+nav {
+  background-color: var(--nav-color-dark-theme);
+  color: var(--nav-text-color-dark-theme);
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
-    border-color: white;
-  }
-  section {
-    display: none; /* Inicialmente oculta todas as seções */
-    padding: 20px;
-  }
-  section.active {
-    display: block; /* Mostra apenas a seção ativa */
-  }
+nav a {
+  color: var(--nav-text-color);
+  text-decoration: none;
+  font-weight: 600 ;
+
+  cursor: pointer;
+  display: inline-block;
+  width: 40vh;
+  gap: 0 5px; 
+  text-align: center;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+section {
+  display: none; /* Inicialmente oculta todas as seções */
+  padding: 25px 10vh 50px;
+}
+
+section.active {
+  display: block; /* Mostra apenas a seção ativa */
+}
+
+.active {
+  background: var(--content-color-dark-theme);
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--body-h123456-text-Color);
+
+  text-align: center;
+}
+
+footer {
+  background: var(--nav-color-dark-theme);
+  color: var(--nav-text-color-dark-theme);
+
+}
+
+footer p {
+  height: 50px;
+
+  margin: 0;
+  text-align: center;
+}
