@@ -19,6 +19,7 @@ body {
   padding: 0;
   border: 0;
   color: var(--body-text-color-dark-theme);
+  background: var(--content-color-dark-theme);
 
   height: 100vh;
   width: 100%;
@@ -31,6 +32,12 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  position: fixed; /* Fixa o footer na janela */
+  top: 0; /* Posiciona o footer na parte inferior */
+  left: 0; /* Alinha o footer à esquerda */
+  width: 100%; /* Faz o footer ocupar toda a largura */
+  z-index: 1; /* Garante que fique acima de outros elementos */
 }
 
 nav a {
@@ -52,35 +59,46 @@ nav a:hover {
 
 section {
   display: none; /* Inicialmente oculta todas as seções */
-  padding: 25px 10vh 50px;
+  padding: 50px 10vh 50px;
 }
 
 section.active {
   display: block; /* Mostra apenas a seção ativa */
 }
 
-.active {
-  background: var(--content-color-dark-theme);
-}
+/* .active {
+
+} */
 
 h1 {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;
   color: var(--body-h123456-text-Color);
+  margin: 20px 0;
 
   text-align: center;
 }
 
 footer {
+  height: 7.5vh;
+
   background: var(--nav-color-dark-theme);
   color: var(--nav-text-color-dark-theme);
+  
+  position: fixed; /* Fixa o footer na janela */
+  bottom: 0; /* Posiciona o footer na parte inferior */
+  left: 0; /* Alinha o footer à esquerda */
+  width: 100%; /* Faz o footer ocupar toda a largura */
+  z-index: 1; /* Garante que fique acima de outros elementos */
 
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Opcional: adiciona uma sombra */
+
+  display: flex; /* Ativa o Flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
 }
 
 footer p {
-  height: 50px;
-
   margin: 0;
-  text-align: center;
 }
