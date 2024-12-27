@@ -66,10 +66,7 @@ section.active {
   display: block; /* Mostra apenas a seção ativa */
 }
 
-/* .active {
-
-} */
-
+/* Page conent  */
 h1 {
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -78,6 +75,14 @@ h1 {
   margin: 20px 0;
 
   text-align: center;
+}
+
+#content {
+  display: flex;
+}
+
+#content img {
+  padding: 15px;
 }
 
 footer {
