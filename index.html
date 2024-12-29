@@ -1,81 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
 
-    <link rel="stylesheet" href="./style/style.css" />
-    <script src="./script.js" defer></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <a onclick="showSection('whyINeedToUse')">Por Que Usar?</a>
-        <a onclick="showSection('howToUse')">Como Usar</a>
-        <a onclick="showSection('howCreate')">Como Criar</a>
-        <a onclick="showSection('howToDoMaintenance')">Manutenção</a>
-        <a href="https://g8controls.marcopolo.com.br/" target="_blank">Portal</a>
-      </nav>
-    </header>
+  <link rel="stylesheet" href="./style/style.css" />
+  <script src="./script.js" defer></script>
 
-    <main>
-      <section id="welcoming" class="active">
-        <div id="cotent">
-          <h1>Introdução à criação de arquivos .XML</h1>
-          <p>
-            Neste, será explorado como criar os arquivos .XML via CU50, e o
-            porquê arquivos .XML são utilizados no setor ENG. Elétrica e ENG.
-            Conceituação.
-          </p>
-        </div>
-      </section>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+</head>
 
-      <section id="whyINeedToUse">
-        <h1>Por Que Usar Arquivos XML?</h1>
-        <p>Os arquivos .XML oferecem flexibilidade e padronização...</p>
-      </section>
+<body>
+  <header>
+    <nav>
+      <a onclick="showSection('whyINeedToUse')">Por Que Usar?</a>
+      <a onclick="showSection('howToUse')">Como Usar</a>
+      <a onclick="showSection('howCreate')">Como Criar</a>
+      <a onclick="showSection('howToDoMaintenance')">Manutenção</a>
+      <a href="https://g8controls.marcopolo.com.br/" target="_blank">Portal</a>
+    </nav>
+  </header>
 
-      <section id="howToUse">
-        <h1>Como Usar Arquivos XML</h1>
-        <p>Segue os passos...</p>
-      </section>
+  <!-- *********************************************************************************** -->
+  <main>
+    <section id="welcoming">
+      <div id="cotent">
+        <h1>Introdução à criação de arquivos .XML</h1>
+        <p>
+          Neste documento, exploraremos como criar arquivos .XML utilizando a CU50 e discutiremos as razões
+          pelas quais os arquivos .XML são utilizados nos setores de Engenharia Elétrica e Engenharia de Conceituação.
+        </p>
 
-      <section id="howCreate">
-        <h1>Criação de arquivos .XML via CU50</h1>
-        <div id="content">
-          <p>
-            Intrnamente a CU50, temos a configuração de alguns materiais
-            configuraveis e instanciaveis, normamente dispostos em um agrupador
-            que recebe o nome: <br />
-            (ZFES)_LOGICAS
-            <br />
-            
-          </p>
-          <img
-            src="./style/folders/RawMaterialOnCu50.png"
-            alt="raw material on CU50"
-          />
-        </div>
-      </section>
+    </section>
 
-      <section id="howToDoMaintenance">
-        <h1>Manutenção de Arquivos XML</h1>
-        <p>Para manter seus arquivos .XML...</p>
-      </section>
-    </main>
+    <!-- *********************************************************************************** -->
+    <section id="whyINeedToUse">
+      <h2>
+        Padronização de opcionais e Nodelist padrão.
+      </h2>
+      <p>
+        O principal objetivo de utilizarmos arquivos com extensão .XML é padronizar os opcionais que serão utilizados na
+        carroceria.
+        Além disso, definir qual pino do módulo multiplex será utilizado para a alimentação e controle do sistema assim
+        utilizado um nodelist padrão para cada ZFES.
+      </p>
 
-    <footer>
-      <p>Created by lucaslip &copy; 2024</p>
-    </footer>
+      <table>
+        <tr>
+          <td>Opcionais</td>
+          <td>Módulo</td>
+          <td>Conector</td>
+          <td>Pino</td>
+        </tr>
+        <tr>
+          <td>Farol de Milha</td>
+          <td>MM1A</td>
+          <td>Conector 1</td>
+          <td>Pino 1</td>
+        </tr>
+        <tr>
+          <td>Farol de Neblina</td>
+          <td>MM1A</td>
+          <td>Conector 1</td>
+          <td>Pino 2</td>
+        </tr>
+      </table>
 
-    <script src="script.js"></script>
-  </body>
+    </section>
+
+    <!-- *********************************************************************************** -->
+    <section id="howToUse" class="active">
+      <h1>Estrutura</h1>
+      <p>
+        A estrutura de um arquivo .XML é composta por tags, que são delimitadas por
+        < e>, por exemplo.: <br>
+          <div id="xmlStructure">
+            <span class="tag">
+              < name>
+            </span>MM1A <span class="tag">
+              < name>
+            </span>
+          </div>
+
+      </p>
+      <p>
+        Entre os simbolos < e>, temos o nome da tag, que é o identificador da tag, e entre os identificadores temos o
+          valor da tag.
+      </p>
+
+      <p>
+        Ao utilizarmos uma tag dentro da outra, estamos reresentando um agrupamento de tags, por exemplo.: <br>
+      </p>
+
+      <div id="xmlStructure">
+        <p>
+          <span class="tag">
+            < MUX>
+          </span><br>
+          <span class="tag">....< Name></span>MM1A <span class="tag">
+            < name>
+          </span> <br><br>
+          <span class="tag">....< PIN_SET></span><br>
+          <span class="tag">........< CN></span>1 <span class="tag">
+            < CN>
+          </span> <br>
+          <span class="tag">........< PN></span>1 <span class="tag">
+            < PN>
+          </span> <br>
+          <span class="tag">........< LOAD></span>10,50A <span class="tag">
+            < LOAD>
+          </span> <br>
+          <span class="tag">........< LOGIC></span>XXXXXXXX <span class="tag">
+            < LOGIC>
+          </span> <br>
+          <span class="tag">........< NAME></span>UD_USB <span class="tag">
+            < NAME>
+          </span> <br>
+
+          <span class="tag">....< PIN_SET></span> <br><br>
+          <span class="tag">
+            < MUX />
+          </span><br>
+        </p>
+      </div>
+      <p>
+        O caso demonstrado acima, representa a estrutura de um arquivo .XML
+        <br><br>
+      </p>
+
+      <p>
+      <ul><span class="tag"> MUX</span></ul>
+      Representa o inicio e fim módulo multplex MM1A.
+
+      <ul><span class="tag"> PIN_SET</span></ul>
+      Representa o inicio e fim das informações pertencentes a um pino.
+
+      <ul><span class="tag"> CN</span></ul>
+      Representa o conector do pino.
+
+      <ul><span class="tag"> PN</span></ul>
+      Representa o pino do conector.
+      </p>
+
+      <h2>
+        Informações do Pino
+      </h2>
+      <p>
+        As informações como Load, logic e name, são informações que dirão como o pino ira se comportar.
+
+      <ul><span class="tag"> LOAD</span></ul>
+      Corrente que o pino ira enviar ou receber <br>
+      <span id="obs">
+        OBS. No sistema multplex Lohr Amsys, caso o valor determinado seja ultrapassado,
+        uma mensagem de erro sera exibida na HeadUnit ( Visio4-4.3" / HU10" ) e tag NFC quando exportada.
+      </span>
+
+      <ul><span class="tag"> LOGIC</span></ul>
+      <ul><span class="tag"> NAME</span></ul>
+      </p>
+
+
+    </section>
+
+    <!-- *********************************************************************************** -->
+    <section id="howCreate">
+      <h1>Criação de arquivos .XML via CU50</h1>
+      <div id="content">
+        <p>
+          Intrnamente a CU50, temos a configuração de alguns materiais
+          configuraveis e instanciaveis, normamente dispostos em um agrupador
+          que recebe o nome: <br />
+          (ZFES)_LOGICAS
+          <br />
+
+        </p>
+        <img src="./style/folders/RawMaterialOnCu50.png" alt="raw material on CU50" />
+      </div>
+    </section>
+
+    <section id="howToDoMaintenance">
+      <h1>Manutenção de Arquivos XML</h1>
+      <p>Para manter seus arquivos .XML...</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created by lucaslip &copy; 2024</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
 </html>

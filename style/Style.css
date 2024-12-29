@@ -66,14 +66,24 @@ section.active {
   display: block; /* Mostra apenas a seção ativa */
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
-  font-style: normal;
-  font-weight: 600;
+
   color: var(--body-h123456-text-Color);
-  margin: 20px 0;
+  margin: 20px 0px 0px;
+
+}
+
+h1{
+  font-weight: 600;
+  font-style: normal;
 
   text-align: center;
+}
+
+h2{
+  font-weight: 600;
+  font-style: normal;
 }
 
 footer {
@@ -97,4 +107,48 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+/* style for whyINeedToUse page. */
+/* table style */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+tr {
+  background-color: var(--nav-color-dark-theme);
+  color: var(--nav-text-color-dark-theme);
+  font-weight: bold;
+}
+
+td{
+  gap: 2.5px 5px;
+
+  background-color: var(--nav-color-dark-theme);
+  color: var(--nav-text-color-dark-theme);
+}
+
+
+/* How to use */
+.tag {
+  color: var(--nav-text-color-dark-theme);
+}
+
+ul{
+  margin-block-end: 2px;
+}
+
+#xmlStructure {
+  border: 2px solid var(--nav-color-dark-theme);
+  background-color: var(--nav-color-dark-theme);
+  border-radius: 5px;
+
+  padding: 10px;
+}
+
+#obs {
+  font-size: 0.6em;
+  opacity: 0.5;
 }
