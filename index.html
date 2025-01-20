@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>XML files</title>
 
   <link rel="stylesheet" href="./style/style.css" />
   <script src="./script.js" defer></script>
@@ -142,10 +142,11 @@
       Representa o inicio e fim das informações pertencentes a um pino.
 
       <ul><span class="tag"> CN</span></ul>
-      Representa o conector do pino.
+      Representa o pino do conector.
 
       <ul><span class="tag"> PN</span></ul>
-      Representa o pino do conector.
+      Representa o conector do pino.
+
       </p>
 
       <h2>
@@ -156,13 +157,14 @@
 
       <ul><span class="tag"> LOAD</span></ul>
       Corrente que o pino ira enviar ou receber <br>
-      <span id="obs">
-        OBS. No sistema multplex Lohr Amsys, caso o valor determinado seja ultrapassado,
-        uma mensagem de erro sera exibida na HeadUnit ( Visio4-4.3" / HU10" ) e tag NFC quando exportada.
-      </span>
 
       <ul><span class="tag"> LOGIC</span></ul>
+      Determina como o pino ira se comportar <br>
+      O mesmo é representado por um código SAP, que pode ser aberto para uma melhor compreensão <br>
+
       <ul><span class="tag"> NAME</span></ul>
+      Representa o nome unico do pino,  
+
       </p>
 
 
@@ -173,8 +175,8 @@
       <h1>Criação de arquivos .XML via CU50</h1>
       <div id="content">
         <p>
-          Intrnamente a CU50, temos a configuração de alguns materiais
-          configuraveis e instanciaveis, normamente dispostos em um agrupador
+          Internamente a CU50, temos a configuração de alguns materiais
+          configuraveis e instanciaveis, normalmente dispostos em um agrupador
           que recebe o nome: <br />
           (ZFES)_LOGICAS
           <br />
