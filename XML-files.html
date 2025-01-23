@@ -46,12 +46,12 @@
       <p>
         O principal objetivo de utilizarmos arquivos com extensão .XML é para que seja possivel padronizar os opcionais
         que serão utilizados na carroceria, dando nomes a cada pino de cada módulo, e assim, facilitando a identificação
-        de cada um deles e defininfo um padão a ser seguido.
+        de cada um deles e definindo um padão a ser seguido.
       </p>
       <p>
         Cada módulo terá um nome, como: MM1A, MM1B, MM2A e assim por diante, "MM" significa módulo multplex, o número
-        sequente significa a posição, no caso dos Paradiso G8 DD, MM1A ou MM1B estão na central superios lado esquerdo.
-        já a ultima lertra, é para diferenciar dois módulos que estão na mesma central.
+        sequente significa a posição, no caso dos Paradiso G8 DD, MM1A ou MM1B estão na central superior lado esquerdo.
+        já a ultima letra, é para diferenciar dois módulos que estão na mesma central.
       </p>
       <table>
         <tr>
@@ -78,7 +78,7 @@
       <p>
         Quando utilizamos arquivos .XML para determinar quais opcionais serão habilitados e seus respectivos pinos,
         não se faz mais necessário a criação de um nodelist especifico para cada carro. <br>
-        O SAP faz o arquivo de forma automatica quando bem configurado, sendo necessário apenas carregar o mesmo ao portal.
+        O SAP faz o arquivo de forma automática quando bem configurado, sendo necessário apenas carregar o mesmo ao portal.
       </p>
       <img src="./style/folders/Portal_do_fornecedor.png" alt="Imagem que representa os arquivos carregados ao portal do fornecedor">
     </section>
@@ -99,13 +99,13 @@
 
       </p>
       <p>
-        Entre os simbolos "<" e ">", temos o nome da tag, < logic> e seu encerramento < /logic>. <br>
+        Entre os símbolos "<" e ">", temos o nome da tag, < logic> e seu encerramento < /logic>. <br>
         Entre as tags, temos o conteudo da tag: < logic>XXXXXXXX< /logic> <br>
 
       </p>
 
       <p>
-        Ao utilizarmos uma tag dentro da outra, estamos reresentando um agrupamento de tags, por exemplo.: <br>
+        Ao utilizarmos uma tag dentro da outra, estamos representando um agrupamento de tags, por exemplo.: <br>
       </p>
 
       <div id="xmlStructure">
@@ -146,7 +146,7 @@
 
       <p>
       <ul><span class="tag"> MUX</span></ul>
-      Representa o inicio e fim módulo multplex MM1A.
+      Representa o inicio e fim módulo multiplex MM1A.
 
       <ul><span class="tag"> PIN_SET</span></ul>
       Representa o inicio e fim das informações pertencentes a um pino.
@@ -163,7 +163,7 @@
         Informações do Pino
       </h2>
       <p>
-        As informações como Load, logic e name, são informações que dirão como o pino ira se comportar.
+        As informações como Load, logic e name, são informações que dirão como o pino irá se comportar.
 
       <ul><span class="tag"> LOAD</span></ul>
       Corrente que o pino ira enviar ou receber <br>
@@ -173,7 +173,7 @@
       O mesmo é representado por um código SAP, que pode ser aberto para uma melhor compreensão <br>
 
       <ul><span class="tag"> NAME</span></ul>
-      Representa o nome unico do pino,
+      Representa o nome único do pino,
 
       </p>
 
@@ -194,7 +194,7 @@
           ).</p>
         <p>
           A classe é responsável por definir as informações do material, como: Peso, Altura, Largura, Comprimento, entre
-          outros utilizando "variaveis", todo material nesta classe recebe as mesmas caracterisitcas. <br>
+          outros utilizando "variáveis", todo material nesta classe recebe as mesmas caracterisitcas. <br>
           No caso da classe CP6619M21001, temos as seguintes variaveis: <br>
         </p>
         <table>
@@ -267,7 +267,7 @@
           Este agrupador em questão será responsável única e exclusivamente por agrupar os códigos responsáveis pela
           criação do .XML de cada ZFES.<br>
           Não é correto utilizar mais de um agrupador para a geração dos arquivos .XML de uma carroceria, da mesma forma
-          como não é intereçante utiliza-ló para determinais montagens ou componentes.
+          como não é interessante utilizá-lo para determinadas montagens ou componentes.
         </p>
 
         <img src="./style/folders/CU50image.jpg"
@@ -331,9 +331,9 @@
         <!-- Configuração dos aateriais -->
         <h2>Configuração</h2>
         <p>
-          Após a adição dos material ao agrupador, basta configurar cada uma das caracteristicas do material, da mesma
+          Após a adição dos material ao agrupador, basta configurar cada uma das características do material, da mesma
           forma como é feito na configuração de um Nó de classe, para que
-          sejam respondidas de acordo com sua nescessidade.
+          sejam respondidas de acordo com sua necessidade.
         </p>
 
         <div id="ABAP-Struture">
@@ -372,10 +372,10 @@
 
         <p>
           <br>
-          Após o Preenchimento das informações do módulo, começaremos o preenchimento das caracterisitcas que
+          Após o Preenchimento das informações do módulo, começaremos o preenchimento das características que
           representam os pinos.<br>
           <span id="obs">
-            Não é necessário separar em duas regras diferentes, podemos utilizar apénas uma regra de procedencia.
+            Não é necessário separar em duas regras diferentes, podemos utilizar apenas uma regra de procedencia.
           </span>
         </p>
         <p>
@@ -412,7 +412,7 @@
         </ul>
         </p>
         <p>
-          Quando utilizamos o "$SELF.F066" para respondermos uma característica será nescessario adicionar essas três
+          Quando utilizamos o "$SELF.F066" para respondermos uma característica será necessário adicionar essas três
           informações, mas para isso, teremos de adicionar o caractere "|" entre cada resposta, por exemplo: <br>
 
           $SELF.F066 = '1,00A|12924013|DRL' IF $ROOT.C902 = 'TEM_SEM_TECLA',
@@ -483,7 +483,7 @@
 
       <h2>Configurar geração do ZFES</h2>
       <p>
-        Agora, para que seja possível gerar os arquivos .XML com base no agrupador, será nescessario adicionar o ZFES a
+        Agora, para que seja possível gerar os arquivos .XML com base no agrupador, será necessário adicionar o ZFES a
         uma lista presente na tranzação: ZPP376. <br>
         Aqui, será nescessario adicionar o ZFES, código do fornecedor, contador, agrupador e a data de validade.
       <ul>
@@ -517,7 +517,7 @@
 
       <h3>Geração do arquivo</h3>
       <p>
-        Agora que todos os passos foram preenchidos, será necessário fazer apénas alguns ultimos passos. <br><br>
+        Agora que todos os passos foram preenchidos, será necessário fazer apenas alguns ultimos passos. <br><br>
 
         1. Gerar os instanciaveis <br>
         2. Esperar que seja dado o status de PF ao projeto <br>
